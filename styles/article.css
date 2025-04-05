@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@500;700&display=swap');
+
+:root {
+  --font-body: 'Inter', sans-serif;
+  --font-display: 'Playfair Display', serif;
+  --primary-red: #a22323;
+  --ink-black: #111;
+  --soft-gray: #f5f5f5;
+  --max-width: 800px;
+}
+/* Base */
+body {
+  margin: 0;
+  background: white;
+  color: var(--ink-black);
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  line-height: 1.9;
+}
+
+/* Container */
+.article-container {
+  max-width: var(--max-width);
+  margin: 6rem auto;
+  padding: 0 2rem;
+}
+
+.artcle-badge{
+    background-color: var(--grounding-green);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 1px 15px;
+    border-radius: 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Header */
+.article-header {
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 3rem;
+  padding-bottom: 1.5rem;
+}
+
+.article-title {
+  font-family: var(--font-display);
+  font-size: 4.2rem;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.article-meta {
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 1rem;
+  display: flex;
+  gap: 1.2rem;
+}
+
+/* Essay Body */
+.article-body {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+.article-body p {
+  margin: 2.2rem 0;
+}
+
+.article-body .drop-cap::first-letter {
+  float: left;
+  font-size: 4.5rem;
+  line-height: 1;
+  margin: 0.4rem 1rem 0 0;
+  font-family: var(--font-display);
+  font-weight: 500;
+  color: var(--primary-red);
+}
+
+/* Images */
+figure.editorial {
+  margin: 4rem 0;
+  position: relative;
+}
+
+figure.editorial img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  display: block;
+  object-fit: cover;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+}
+
+figure.editorial.wide {
+  margin-left: -4rem;
+  margin-right: -4rem;
+  max-width: none;
+}
+
+figure.editorial.split {
+  display: flex;
+  gap: 2rem;
+}
+
+figure.editorial.split img {
+  width: 50%;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #777;
+  margin-top: 0.8rem;
+  text-align: center;
+}
+
+/* Pull Quote */
+.pull-quote {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--primary-red);
+  text-align: center;
+  padding: 2rem 1rem;
+  margin: 4rem auto;
+  max-width: 600px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Article Navigation */
+.article-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6rem;
+  padding-top: 2rem;
+  border-top: 1px solid #eee;
+}
+
+.nav-card {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-card h4 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+  color: var(--primary-red);
+}
+
+.nav-card p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .article-title {
+    font-size: 2.6rem;
+  }
+
+  figure.editorial.wide {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  figure.editorial.split {
+    flex-direction: column;
+  }
+
+  figure.editorial.split img {
+    width: 100%;
+  }
+}
+
+/* 1. Animate ink splashes */
+.ink-splash {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: url('../assets/images/ink.png') no-repeat center;
+  background-size: contain;
+  opacity: 0.04;
+  animation: floatSplash 16s ease-in-out infinite alternate;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.ink-splash.right {
+  transform: rotate(180deg);
+}
+
+@keyframes floatSplash {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    transform: translateY(-15px) scale(1.02);
+  }
+}
+
+#ident {
+  text-indent: 2em;
+}
+
+.article-meta span {
+  position: relative;
+  color: var(--) var(--ink-black);
+  font-weight: 500;
+  font-family: var(--font-display);
+}
+
+.article-body p[style*='text-align: end'] {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.3rem;
+  margin-top: 3rem;
+  color: var(--primary-red);
+  letter-spacing: 0.02em;
+}
+
+.article-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -40px;
+  width: 60px;
+  height: 100%;
+  background: url('../assets/images/paper-edge.png') repeat-y;
+  background-size: contain;
+  opacity: 0.06;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .article-container::before {
+    display: none;
+  }
+}

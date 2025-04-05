@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AE Chronicles - Pagină pierdută</title>
+     <!-- Favicons -->
+     <link
+     rel="icon"
+     type="image/png"
+     sizes="16x16"
+     href="assets/icons/AE-16x16.png"
+   />
+   <link
+     rel="icon"
+     type="image/png"
+     sizes="32x32"
+     href="assets/icons/AE-32x32.png"
+   />
+   <link
+     rel="apple-touch-icon"
+     sizes="180x180"
+     href="assets/icons/AE-iphone-size.png"
+   />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="./styles/404.css" />
+  </head>
+  <body>
+    <div class="error-container">
+      <div class="art-error">
+        <div class="broken-hanger"></div>
+        <div class="paint-splatter" style="top: 30%; left: 20%"></div>
+        <div class="paint-splatter" style="top: 50%; right: 15%"></div>
+      </div>
+
+      <div class="error-content">
+        <h1 class="error-code">404</h1>
+        <p class="error-message">
+         Page Not Found
+        </p>
+
+        <a href="/" class="home-link"> ← Întoarce-te la povești </a>
+
+        <footer class="footer-content">
+            <div class="footer-left">
+              © 2025 AE – Toate drepturile rezervate
+              <span class="visually-hidden"
+                >, cu excepția dreptului de a fi glorios de imperfectă.</span
+              >
+            </div>
+            <div class="footer-right">
+              <a
+                href="https://www.instagram.com/andreeae.ene/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Profil Instagram"
+              >
+                <img src="assets/icons/InstagramIcon.png" alt="Iconă Instagram" />
+              </a>
+              <a
+                href="https://ro.pinterest.com/andreaaene12/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Profil Pinterest"
+              >
+                <img src="assets/icons/PinterestPng.png" alt="Iconă Pinterest" />
+              </a>
+            </div>
+          </footer>
+          <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const urlParams = new URLSearchParams(window.location.search);
+                const reason = urlParams.get('reason');
+                const invalidFilter = urlParams.get('filter');
+            
+                const errorContainer = document.getElementById('error-message');
+                
+                if(reason === 'invalid_filter') {
+                    errorContainer.innerHTML = `
+                        <h2>Filtru necunoscut: "${invalidFilter}"</h2>
+                        <p>Vă sugerăm să încercați:</p>
+                        <div class="filter-suggestions">
+                            <a href="/articles.html?filter=reflection">Reflecții</a>
+                            <a href="/articles.html?filter=fashion">Modă</a>
+                            <a href="/articles.html?filter=arta">Artă</a>
+                        </div>
+                    `;
+                }
+            });
+            </script>
+  </body>
+</html>
