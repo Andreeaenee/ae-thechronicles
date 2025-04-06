@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista cu liste - AE Chronicles</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/icons/AE-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/icons/AE-32x32.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/icons/AE-iphone-size.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/article.css" />
+    <style>
+      .hover-container {
+        position: relative;
+        display: inline;
+        cursor: pointer;
+        /* text-decoration: underline ; */
+      }
+
+      .hover-container .tooltip-image {
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 220px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 1000;
+        pointer-events: none;
+        border-radius: 20px;
+        border: 2px solid #e0e0e0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .hover-container:hover .tooltip-image {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(-10px);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Section -->
+    <nav class="main-nav">
+      <div class="nav-container">
+        <div class="nav-logo">AE</div>
+        <ul class="nav-links">
+          <li><a href="../index.html">Acasă</a></li>
+          <li class="nav-tags">
+            <span>Articole</span>
+            <ul class="dropdown">
+              <!-- Change the filter buttons in navigation -->
+              <li>
+                <a href="../articles.html?filter=reflection" class="filter-btn"
+                  >Reflecții</a
+                >
+              </li>
+              <li>
+                <a href="./articles.html?filter=fashion" class="filter-btn"
+                  >Fashion</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Section -->
+    <main>
+      <article class="article-container">
+        <header class="article-header">
+          <h1 class="article-title">Lista cu liste</h1>
+          <div class="article-meta">
+            <span>7 Aprilie 2025</span>
+            <div class="artcle-badge">Reflecții</div>
+          </div>
+        </header>
+
+        <div class="article-body">
+          <p class="drop-cap">
+            Secolul 21, iPhone-urile si setea noastra de a exploata inteligenta
+            artificiala la cote maxime ne indeparteaza, ușor dar sigur, de artă,
+            istorie și umanitate. Devine cu adevărat un efort dorința de a
+            consuma și altceva decât rețele sociale care, din cauza abundenței
+            de alegeri, mai mult tâmpesc.
+          </p>
+
+          <p id="ident">
+            Aflându-mă în perioada celor mai frumoși ani ai vieții, găsesc o
+            provocare sa ies singura la o cafea, în oraș, doar cu gandurile mele
+            sau o carte buna. Găsesc o provocare sa ies la plimbare într-un oraș
+            cu o arhitectura splendidă fără un scop anume, de parcă o mica pauza
+            in program ar fi o catastrofa. Și apoi, programul e o problema și
+            mai mare. Vinovăția de a mă abate de la el e copleșitoare. Un
+            program care ar vrea sa iti sporească productivitatea, sa le
+            reusesti pe toate dar și să te odihnesti; sa nu uiti de intalnirile
+            importante de care nu ai chef, dar și sa iti dea satisfactia
+            necesara cand bifezi casuța ca fiind terminată. Apoi, începem sa ne
+            facem liste pentru orice: o lista de cumparaturi, de filme pe care
+            vrem sa le privim, cărți pe care vrem sa le citim, locuri pe care am
+            vrea sa le vizitam și restaurante la care am vrea sa luăm cina
+            într-o zi aglomerată de marți seara cu un asfintit sangeriu ca
+            priveliste. Eu sunt cu siguranța o astfel de persoana: am nevoie de
+            o lista cu liste pentru a avea vaga impresie că dețin controlul
+            asupra haosului în care mă trezesc în fiecare zi. Și atunci, nu mă
+            pot abține sa intreb: cand o sa renuntam în a face liste cu lucruri
+            pe care am dori sa le facem la un moment dat și să trecem odată și
+            odată la acțiune? Pana cand o sa așteptam acea seara de marți cu
+            asfințit sângeriu?
+          </p>
+          <p id="ident">
+            Sunt sigură ca psihologii ar găsi o denumire pentru starea
+            întrebării mele într-o clipita, fără prea mult deranj. Pană la urma,
+            psihologii eticheteaza stările și gândurile ca vânzătorii bananele
+            în raionul cu fructe. Eu prefer sa îi spun mult mai simplu:
+            comoditate - o combinatie nebună de lene, frica de ceva nou și
+            sentimentul de “mie mi-e bine așa, acum”.
+          </p>
+
+          <p id="ident">
+            Trebuie sa punctez, totuși, că sunt mândră de mine. Mi-am recunoscut
+            problema și am înfruntat-o - primul pas în lupta pe care o duc
+            dependenții și fricoșii. Partea următoare e mai complicată: cum să
+            scap de fenomenul amânării? Oare să-mi fac o lista cu pașii pe care
+            trebuie sa îi urmez? Recunosc, sunt tentată asemeni celui care se
+            minte cu o ultimă țigară.
+          </p>
+
+          <p id="ident">
+            Mi-am întrebat un prieten, un împătimit al listelor la rândul lui,
+            cum face față presiunii bifelor. A ras, apoi mi-a zis cel mai
+            dezamăgitor lucru cu putință: trebuie sa te programezi mental cu un
+            orar fix. Și dacă lenea mea este mai asurzitoare decât alarma
+            telefonului? Ce facem în cazul asta? Casuta pentru bifa ramane
+            goală, vina crește si eu închid ochii tot mai strans în speranta ca
+            lista sa dispara, asemeni unui vis urat. La sfarsit de saptamana, un
+            alt tip al prietenului meu este sa iti faci un raport și să treci în
+            revistă chestiile pe care le-ai reușit sa le faci și pe care nu.
+            Merită încercat?
+          </p>
+
+          <p id="ident">
+            În ceea ce mă privește, mi-am găsit pofta de a fi productivă strâns
+            legată cu mediul în care stau și, mai degrabă, cu necesitatea de a-l
+            schimba constant. Din moment ce mă regasesc prea comodă în scaunul
+            de gaming acasă, îl schimb pe fotoliul de un albastru azuriu din
+            apartamentul micuț din piața Unirii sau pe o mica canapea de langa o
+            fereastra într-o cafenea. Următoare locație de pe listă (culmea) în
+            care vreau sa îmi testez performanța concentrării ar fi biblioteca
+            din cadrul universității de Vest.
+          </p>
+
+          <p id="ident">
+            Astfel, am ajuns, rușinos de târziu, la concluzia că voința,
+            concentrarea și blocarea iPhone-ului sunt secretul rezolvării mici
+            mele probleme de amânare. Pe plan profesional, desigur. Dar în rest?
+            Cand mai ajung sa admir acel asfințit sângeriu?
+          </p>
+
+          <p style="text-align: end">-AE</p>
+        </div>
+
+        <div class="article-navigation">
+          <a href="./de-ce.html" class="nav-card">
+            <h4>← Articol precedent</h4>
+            <p>De ce?</p>
+          </a>
+          <a href="./accent-de-rosu.html" class="nav-card">
+            <h4>Articol următor →</h4>
+            <p>Accent de roșu</p>
+          </a>
+        </div>
+      </article>
+    </main>
+
+    <!-- Footer Section -->
+    <div class="footer-content">
+      <div class="footer-left">
+        © 2025 AE – Toate drepturile rezervate, cu excepția dreptului de a fi
+        glorios de imperfectă.
+      </div>
+      <div class="footer-right">
+        <a href="https://www.instagram.com/andreeae.ene/" target="_blank">
+          <img src="../assets/icons/InstagramIcon.png" alt="Instagram" />
+        </a>
+        <a href="https://ro.pinterest.com/andreaaene12/" target="_blank">
+          <img src="../assets/icons/PinterestPng.png" alt="Pinterest" />
+        </a>
+      </div>
+    </div>
+
+    <script>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+          }
+        });
+      });
+
+      document.querySelectorAll('.editorial-image').forEach((img) => {
+        observer.observe(img);
+      });
+    </script>
+  </body>
+</html>

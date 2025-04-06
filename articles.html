@@ -27,62 +27,35 @@
       rel="stylesheet"
     />
     <style>
-      /* Header Animation Styles */
-      @keyframes floatFadeIn {
-        0% {
-          opacity: 0;
-          transform: translateY(-20px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
+      .article-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 2rem 0;
       }
 
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-      .active-filter {
-        color: #2c3e50 !important;
-        font-weight: 600;
+      .article-card {
         position: relative;
+        display: block;
+        overflow: hidden;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
       }
 
-      .active-filter::after {
-        content: '';
-        position: absolute;
-        bottom: 12px;
-        left: 0;
+      .article-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .article-card img {
         width: 100%;
-        height: 2px;
-        background-color: #2c3e50;
-        animation: underlineExpand 0.3s ease-out;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px;
       }
-
-      /* Articles page specific styles */
       .all-articles {
         padding: 4rem 2rem;
         max-width: 1200px;
         margin: 0 auto;
-      }
-
-      .articles-main .article-grid {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 2.5rem;
-        padding: 2rem 0;
-      }
-      @keyframes underlineExpand {
-        from {
-          width: 0;
-        }
-        to {
-          width: 100%;
-        }
       }
     </style>
   </head>
@@ -100,6 +73,11 @@
               <li>
                 <a href="?filter=reflection" class="filter-btn">Reflecții</a>
               </li>
+              <li>
+                <a href="./articles.html?filter=fashion" class="filter-btn"
+                  >Fashion</a
+                >
+              </li>
             </ul>
           </li>
         </ul>
@@ -111,19 +89,43 @@
       <section class="all-articles">
         <h2 class="section-title" style="margin-left: 0px">Articole</h2>
         <div class="article-grid">
-          <!-- Article cards with data-tag attributes -->
-          <div class="article-card" data-tag="reflection">
-            <a href="articles/de-ce.html" data-tag="reflection">
-              <div class="badge">Reflecții</div>
-              <img src="assets/images/covers/1cover.png" alt="Post 1" />
-              <div class="article-info">
-                <h3>De ce?</h3>
-              </div>
-            </a>
-          </div>
-          <div class="article-card" data-tag="fashion">
-            <!-- Content -->
-          </div>
+          <!-- Reflection Articles -->
+          <a
+            href="articles/de-ce.html"
+            class="article-card"
+            data-tag="reflection"
+          >
+            <div class="badge">Reflecții</div>
+            <img src="assets/images/covers/1cover.png" alt="Post 1" />
+            <div class="article-info">
+              <h3>De ce?</h3>
+            </div>
+          </a>
+
+          <a
+            href="articles/lista-cu-liste.html"
+            class="article-card"
+            data-tag="reflection"
+          >
+            <div class="badge">Reflecții</div>
+            <img src="assets/images/covers/2cover.png" alt="Post 2" />
+            <div class="article-info">
+              <h3>Lista cu liste</h3>
+            </div>
+          </a>
+
+          <!-- Fashion Article -->
+          <a
+            href="articles/accent-de-rosu.html"
+            class="article-card"
+            data-tag="fashion"
+          >
+            <div class="badge">Fashion</div>
+            <img src="assets/images/covers/3cover.png" alt="Post 3" />
+            <div class="article-info">
+              <h3>Accent de roșu</h3>
+            </div>
+          </a>
         </div>
       </section>
     </main>
@@ -147,32 +149,37 @@
     <script src="scripts/main.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
-          const validFilters = ['reflection', 'fashion', 'arta', 'all'];
-          const urlParams = new URLSearchParams(window.location.search);
-          const filter = urlParams.get('filter') || 'all';
-      
-          // Validate filter
-          if (!validFilters.includes(filter)) {
-              window.location.replace('/404.html?reason=invalid_filter&filter=' + encodeURIComponent(filter));
-              return;
-          }
-      
-          // Rest of your existing code
-          const titleMap = {
-              reflection: '🖋️ Reflecții',
-              // fashion: '👗 Modă',
-              // arta: '🎨 Artă',
-              // all: '📚 Toate Articolele'
-          };
-      
-          const sectionTitle = document.querySelector('.section-title');
-          sectionTitle.textContent = titleMap[filter] || 'Articole';
-      
-          document.querySelectorAll('.filter-btn').forEach(link => {
-              const linkFilter = new URLSearchParams(link.search).get('filter');
-              if(linkFilter === filter) link.classList.add('active-filter');
-          });
+        // Updated valid filters
+        const validFilters = ['reflection', 'fashion', 'cinematografie', 'all'];
+        const urlParams = new URLSearchParams(window.location.search);
+        const filter = urlParams.get('filter') || 'all';
+
+        if (!validFilters.includes(filter)) {
+          window.location.replace('/404.html?reason=invalid_filter');
+          return;
+        }
+
+        const titleMap = {
+          reflection: '🖋️ Reflecții',
+          fashion: '👗 Modă',
+          all: '📚 Toate Articolele',
+        };
+
+        const sectionTitle = document.querySelector('.section-title');
+        sectionTitle.textContent = titleMap[filter] || 'Articole';
+
+        // Filter articles
+        document.querySelectorAll('.article-card').forEach((card) => {
+          card.style.display =
+            filter === 'all' || card.dataset.tag === filter ? 'block' : 'none';
+        });
+
+        // Update active filter
+        document.querySelectorAll('.filter-btn').forEach((btn) => {
+          const btnFilter = new URL(btn.href).searchParams.get('filter');
+          if (btnFilter === filter) btn.classList.add('active-filter');
+        });
       });
-      </script>
+    </script>
   </body>
 </html>
