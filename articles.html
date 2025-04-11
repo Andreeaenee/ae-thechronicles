@@ -92,6 +92,9 @@
                   >Fashion</a
                 >
               </li>
+              <li>
+                <a href="./articles.html?filter=art" class="filter-btn">Artă</a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -140,6 +143,15 @@
               <h3>Accent de roșu</h3>
             </div>
           </a>
+
+          <!-- Art Article -->
+          <a href="articles/sincer.html" class="article-card" data-tag="art">
+            <div class="badge">Art</div>
+            <img src="assets/images/covers/4cover.png" alt="Post 4" />
+            <div class="article-info">
+              <h3>Sincer</h3>
+            </div>
+          </a>
         </div>
       </section>
     </main>
@@ -164,7 +176,7 @@
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         // Updated valid filters
-        const validFilters = ['reflection', 'fashion', 'cinematografie', 'all'];
+        const validFilters = ['reflection', 'fashion', 'art', 'all'];
         const urlParams = new URLSearchParams(window.location.search);
         const filter = urlParams.get('filter') || 'all';
 
@@ -176,6 +188,7 @@
         const titleMap = {
           reflection: '🖋️ Reflecții',
           fashion: '👗 Modă',
+          art: '🎨 Artă',
           all: '📚 Toate Articolele',
         };
 
