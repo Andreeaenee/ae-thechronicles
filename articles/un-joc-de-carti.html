@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Un joc de cărți - AE Chronicles</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/icons/AE-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/icons/AE-32x32.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/icons/AE-iphone-size.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/article.css" />
+    <style>
+      .hover-container {
+        position: relative;
+        display: inline;
+        cursor: pointer;
+        /* text-decoration: underline ; */
+      }
+
+      .hover-container .tooltip-image {
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 220px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 1000;
+        pointer-events: none;
+        border-radius: 20px;
+        border: 2px solid #e0e0e0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .hover-container:hover .tooltip-image {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(-10px);
+      }
+    </style>
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-18TW2HCZJM"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-18TW2HCZJM');
+  </script>
+  <body>
+    <!-- Navigation Section -->
+    <nav class="main-nav">
+      <div class="nav-container">
+        <div class="nav-logo">AE</div>
+        <ul class="nav-links">
+          <li><a href="../index.html">Acasă</a></li>
+          <li><a href="../book-series/index.html">Cărți</a></li>
+          <li class="nav-tags">
+            <span>Articole</span>
+            <ul class="dropdown">
+              <!-- Change the filter buttons in navigation -->
+              <li>
+                <a href="../articles.html?filter=reflection" class="filter-btn"
+                  >Reflecții</a
+                >
+              </li>
+              <li>
+                <a href="../articles.html?filter=fashion" class="filter-btn"
+                  >Fashion</a
+                >
+              </li>
+              <li>
+                <a href="../articles.html?filter=art" class="filter-btn"
+                  >Artă</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Section -->
+    <main>
+      <article class="article-container">
+        <header class="article-header">
+          <h1 class="article-title">Un joc de cărți</h1>
+          <div class="article-meta">
+            <span>30 Aprilie 2025</span>
+            <div class="artcle-badge">Reflecții</div>
+          </div>
+        </header>
+
+        <div class="article-body">
+          <p class="drop-cap">
+            Italia, 23 aprilie. Scris de mână: incert, deșirat, cu un creion
+            simplu. Încerc, fără sorți de izbândă, să găsesc un moment de răgaz
+            pentru a-mi aduna gândurile.
+          </p>
+
+          <p id="ident">
+            Am avut ocazia să-mi petrec sărbătorile pascale alături de băiatul
+            cârlionțat într-un orășel mic, liniștit și uitat de lume din
+            suburbiile Milanului. El, având flerul italienilor și fiind crescut
+            aici mi-a făcut cunoștință cu prietenii săi din liceu. O adunătură
+            de națiuni cum mai rar întâlnești - sud-americani, indieni, români
+            și italieni. Îi strâng laolaltă doar amintirile, jocurile video și
+            setea de băut la un joc improvizat de UNO. Până la urmă, ce îți mai
+            trebuie pentru a vă considera frați?
+          </p>
+          <p id="ident">
+            Am fost invitați la un weekend împreună într-o căsuță aproape
+            părăsită și ruptă de civilizație în stațiunea Lago di Garda. Lacul,
+            aflat între munți, are poalele împânzite de vile și case de vacanță
+            a celor care știu ce-i luxul. Este păstrată arhitectura mediterană
+            caracteristică prin culori calde, balcoane cu flori și obloane de
+            lemn. Aceasta se îmbină perfect cu castelele istorice în stil
+            renascentist, cu terenurile de tenis și piscinele în stil baroc.
+            Mirosea, dacă doriți, a <i>money</i>: iarbă proaspăt tunsă și o
+            adiere a Chanel Nr.5. Ei, nu noi.
+          </p>
+
+          <p id="ident">
+            Noi, pe de altă parte, am stat într-o căsuță care avea panouri
+            solare, dar fără apă caldă sau încălzire în calorifere. Ne-am
+            încălzit, asemeni tuturor sufletelor tinere, cu priveliștea, câteva
+            glume bune și multe shoturi cu alcool. Ne-a unit sărbătorile de
+            Paști, așa cum zilele festive sunt menite să adune oameni buni, deși
+            nu împărtășim cu toții aceeași religie.
+          </p>
+
+          <p id="ident">
+            Spre dimineață, după 2 ore dormite în mașină, am reușit, spre
+            surprinderea tuturor, să ajungem la cascada din apropiere, aflată la
+            o distanță de 20 de minute mers pe jos. O apă rece, cristalină prin
+            care puteai să vezi toate pietricele multicolore se revărsa într-o
+            oază. Pe mal eram noi, tineri, nelinistiti si mahmuri langa 2
+            cupluri de bătrânei, echipați până-n gât cu echipament sportiv de
+            cățărat, clar îndrăgostiți. I-am privit, asemeni unui vis pe care nu
+            l-am trăit încă… I-am zis băiatului cârlionțat că aș veni în fiecare
+            dimineață la cascadă, m-aș așeza pe una din pietre și aș scrie. S-a
+            uitat la mine pe furiș, a făcut o glumă despre genunchii mei
+            sensibili la vreme și a zâmbit. Am zâmbit și eu.
+          </p>
+
+          <p id="ident">
+            Ulterior, am urcat câțiva kilometri cu mașina unde este amenajată și
+            o terasă panoramică. Vă garantez o priveliște extraordinară.
+          </p>
+          <p id="ident">
+            Contemplând după 2 zile asupra micii noastre escapade, cred, în
+            ciuda condițiilor în care am stat, că m-am îndrăgostit de acel
+            colțișor și îndeosebi de cum m-a făcut sa mă simt. M-aș întoarce
+            acolo, m-aș reîntoarce și aș învăța să joc și tenis cu toți
+            aristocrații zilelor noastre. Până la urmă nu a contat decât
+            experiența și pe cine ai alături.
+          </p>
+          <p id="ident">
+            Data viitoare când nu veți avea semnal la telefon și vă plângeți că
+            salteaua este prea tare, amintiți-vă, așa cum voi face și eu, că tot
+            ce lipsește de fapt e un joc de cărți și pe cineva cu care să-l
+            joci.
+          </p>
+
+          <p style="text-align: end">-AE</p>
+        </div>
+
+        <div class="article-navigation">
+          <a href="./razboiul-rece.html" class="nav-card">
+            <h4>← Articol precedent</h4>
+            <p>Războiul Rece</p>
+          </a>
+          <div></div>
+        </div>
+      </article>
+    </main>
+
+    <!-- Footer Section -->
+    <div class="footer-content">
+      <div class="footer-left">
+        © 2025 AE – Toate drepturile rezervate, cu excepția dreptului de a fi
+        glorios de imperfectă.
+      </div>
+      <div class="footer-right">
+        <a href="https://www.instagram.com/andreeae.ene/" target="_blank">
+          <img src="../assets/icons/InstagramIcon.png" alt="Instagram" />
+        </a>
+        <a href="https://ro.pinterest.com/andreaaene12/" target="_blank">
+          <img src="../assets/icons/PinterestPng.png" alt="Pinterest" />
+        </a>
+      </div>
+    </div>
+
+    <script>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+          }
+        });
+      });
+
+      document.querySelectorAll('.editorial-image').forEach((img) => {
+        observer.observe(img);
+      });
+    </script>
+  </body>
+</html>
