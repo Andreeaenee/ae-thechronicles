@@ -282,6 +282,7 @@ body {
   max-width: 1000px;
   margin: 0 auto;
   align-items: center;
+  justify-content: center;
 }
 
 .fragment-image img {
@@ -403,7 +404,6 @@ body {
   width: 100%;
   box-sizing: border-box;
 }
-
 
 .nav-logo {
   font-family: 'Dancing Script', cursive;
