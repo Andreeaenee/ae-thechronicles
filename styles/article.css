@@ -25,16 +25,16 @@ body {
   padding: 0 2rem;
 }
 
-.artcle-badge{
-    background-color: var(--grounding-green);
-    color: white;
-    font-size: 0.75rem;
-    font-weight: 500;
-    padding: 1px 15px;
-    border-radius: 20px;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+.artcle-badge {
+  background-color: var(--grounding-green);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 1px 15px;
+  border-radius: 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* Header */
@@ -231,7 +231,7 @@ figcaption {
   left: -40px;
   width: 60px;
   height: 100%;
-  background: url('../assets/images/paper-edge.png') repeat-y;
+  /* background: url('../assets/images/paper-edge.png') repeat-y; */
   background-size: contain;
   opacity: 0.06;
   pointer-events: none;
@@ -241,4 +241,40 @@ figcaption {
   .article-container::before {
     display: none;
   }
+}
+
+/* Like button for article */
+.like-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+#like-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: 0.2s ease;
+}
+
+#like-button:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.heart-icon {
+  font-size: 2rem;
+  color: #999;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.heart-icon.liked {
+  color: #e63946;
+}
+
+.like-count {
+  font-size: 1rem;
+  color: #333;
 }

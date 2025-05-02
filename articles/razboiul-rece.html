@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Războiul Rece - AE Chronicles</title>
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
       rel="icon"
       type="image/png"
       sizes="16x16"
@@ -61,6 +65,7 @@
         transform: translateX(-50%) translateY(-10px);
       }
     </style>
+    <script type="module" src="../scripts/firebase-config.js"></script>
   </head>
   <!-- Google tag (gtag.js) -->
   <script
@@ -187,6 +192,16 @@
           <p style="text-align: end">-AE</p>
         </div>
 
+        <div class="like-container">
+          <button id="like-button">
+            <i
+              id="heart-icon"
+              class="fa-regular fa-heart heart-icon not-liked"
+            ></i>
+          </button>
+          <span id="like-count">0</span> persoane
+        </div>
+
         <div class="article-navigation">
           <a href="./sincer.html" class="nav-card">
             <h4>← Articol precedent</h4>
@@ -216,17 +231,31 @@
       </div>
     </div>
 
-    <script>
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('in-view');
-          }
-        });
-      });
+    <script type="module">
+      import { initializeLikeSystem } from '../scripts/firebase-config.js';
 
-      document.querySelectorAll('.editorial-image').forEach((img) => {
-        observer.observe(img);
+      document.addEventListener('DOMContentLoaded', () => {
+        // Initialize like system
+        const cleanup = initializeLikeSystem?.();
+
+        // Intersection Observer for images
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in-view');
+            }
+          });
+        });
+
+        document.querySelectorAll('.editorial-image').forEach((img) => {
+          observer.observe(img);
+        });
+
+        // Cleanup when needed
+        window.addEventListener('beforeunload', () => {
+          cleanup?.();
+          observer.disconnect();
+        });
       });
     </script>
   </body>
