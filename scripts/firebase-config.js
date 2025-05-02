@@ -55,9 +55,17 @@ export function initializeLikeSystem() {
     likeBtn.disabled = true;
   }
 
-  // Like button handler
   likeBtn.addEventListener('click', async () => {
-    if (hasLiked) return;
+    const alreadyLiked = localStorage.getItem(`liked_${articleId}`);
+    if (alreadyLiked) return;
+
+    // Optimistic UI update
+    let currentCount = parseInt(likeCountSpan.textContent) || 0;
+    likeCountSpan.textContent = currentCount + 1;
+    heartIcon.classList.remove('fa-regular');
+    heartIcon.classList.add('fa-solid', 'liked');
+    likeBtn.disabled = true;
+    localStorage.setItem(`liked_${articleId}`, 'true');
 
     try {
       const articleRef = doc(db, 'articles', articleId);
@@ -74,17 +82,19 @@ export function initializeLikeSystem() {
           { merge: true }
         );
       });
-
-      localStorage.setItem(`liked_${articleId}`, 'true');
-      likeBtn.disabled = true;
-      heartIcon.classList.remove('fa-regular');
-      heartIcon.classList.add('fa-solid', 'liked');
     } catch (error) {
-      console.error('Like error:', error);
+      // Rollback UI changes
+      likeCountSpan.textContent = currentCount;
+      heartIcon.classList.remove('fa-solid', 'liked');
+      heartIcon.classList.add('fa-regular');
+      likeBtn.disabled = false;
+      localStorage.removeItem(`liked_${articleId}`);
+
+      console.error('Like failed:', error);
       likeBtn.textContent =
         error.code === 'permission-denied'
           ? 'Necesită actualizare ♻️'
-          : 'Eroare neașteptată ⚠️';
+          : 'Eroare la like ⚠️';
 
       setTimeout(() => {
         likeBtn.textContent = '❤️ Îmi place';
