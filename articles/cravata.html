@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cravata - AE Chronicles</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/icons/AE-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../assets/icons/AE-32x32.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/icons/AE-iphone-size.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/article.css" />
+    <style>
+      .hover-container {
+        position: relative;
+        display: inline;
+        cursor: pointer;
+        /* text-decoration: underline ; */
+      }
+
+      .hover-container .tooltip-image {
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 220px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 1000;
+        pointer-events: none;
+        border-radius: 20px;
+        border: 2px solid #e0e0e0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .hover-container:hover .tooltip-image {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(-10px);
+      }
+    </style>
+    <script type="module" src="../scripts/firebase-config.js"></script>
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-18TW2HCZJM"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-18TW2HCZJM');
+  </script>
+  <body>
+    <!-- Navigation Section -->
+    <nav class="main-nav">
+      <div class="nav-container">
+        <div class="nav-logo">AE</div>
+        <ul class="nav-links">
+          <li><a href="../index.html">Acasă</a></li>
+          <li><a href="../book-series/index.html">Cărți</a></li>
+          <li class="nav-tags">
+            <span>Articole</span>
+            <ul class="dropdown">
+              <!-- Change the filter buttons in navigation -->
+              <li>
+                <a href="../articles.html?filter=reflection" class="filter-btn"
+                  >Reflecții</a
+                >
+              </li>
+              <li>
+                <a href="../articles.html?filter=fashion" class="filter-btn"
+                  >Fashion</a
+                >
+              </li>
+              <li>
+                <a href="../articles.html?filter=art" class="filter-btn"
+                  >Artă</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Section -->
+    <main>
+      <article class="article-container">
+        <header class="article-header">
+          <h1 class="article-title">Cravata</h1>
+          <div class="article-meta">
+            <span>5 mai 2025</span>
+            <div class="artcle-badge">Fashion</div>
+          </div>
+        </header>
+
+        <div class="article-body">
+          <p class="drop-cap">
+            Consider că este necesară, cerută chiar, o încredere în sine
+            conștientizată pentru femeile care poartă cravate. O femeie care
+            știe să o poarte cu grație și să transmită în același timp un mesaj
+            clar, definitoriu.
+          </p>
+
+          <p id="ident">
+            Originile cravatei sunt menționate pe
+            <span class="hover-container" style="text-decoration: underline">
+              Columna lui Traian
+              <img
+                src="../assets/images/articles/cravata/columna-lui_traiana.png"
+                alt="Columna lui Traian"
+                class="tooltip-image"
+              /> </span
+            >, în Roma, ca cea mai timpurie dovadă înregistrată. Se zice că
+            aceasta era purtată de către legionari, dar care se aseamănă foarte
+            puțin cu ce cunoaștem noi astăzi. Primul prototip real este găsit în
+            Europa secolului XVII, la curtea lui Ludovic al XIV-lea, inspirat de
+            mercenarii croați (de unde și denumirea cravate, de la croate).
+            Ulterior, odată cu apariția imprimeurilor și, în special al
+            dungilor, cravata a devenit un simbol al unui statut social, cerc de
+            elită sau club:
+            <span class="hover-container" style="text-decoration: underline"
+              >Black Watch
+              <img
+                src="../assets/images/articles/cravata/BlackWatch.png"
+                alt="Black Watch Pattern"
+                class="tooltip-image"
+              /> </span
+            >,
+            <span class="hover-container" style="text-decoration: underline">
+              Life Guards
+              <img
+                src="../assets/images/articles/cravata/LifeGuards.png"
+                alt="Life Guards Pattern"
+                class="tooltip-image"
+              /> </span
+            >,
+            <span class="hover-container" style="text-decoration: underline">
+              Royal Navy
+              <img
+                src="../assets/images/articles/cravata/RoyalNavy.png"
+                alt="Royal Navy Pattern"
+                class="tooltip-image"
+              />
+            </span>
+            etc.
+          </p>
+
+          <p id="ident">
+            Mă fascinează cum a ajuns un accesoriu odată militar să devină un
+            simbol al eleganței. Acum, printre politicieni și multitudinea de
+            birouri de la o multinațională, prezența cravatei reprezintă putere
+            și profesionalism. Nu pot să mă gândesc, totuși, că nu trebuie să ne
+            lăsăm păcăliți de un nod bine făcut. Situația ultra mediatizată a
+            <span class="hover-container" style="text-decoration: underline">
+              întâlnirii
+              <img
+                src="../assets/images/articles/cravata/intalnireZelenskyTrump.jpg"
+                alt="intalnireZelenskyTrump"
+                class="tooltip-image"
+              />
+            </span>
+            dintre Donald Trump și Vladimir Zelensky în Biroul Oval îmi susține
+            ideea perfect. Lipsa de respect și educația non existentă a sărit în
+            ochi, împreună cu cravata roșie, prea lungă și costumul scump. În
+            unele cazuri, o cravată se poate transforma dintr-o armură - într-o
+            mască comică, chiar grotescă…
+          </p>
+
+          <p id="ident">
+            Pe de altă parte, pentru femeile din secolul XX, cravata se asocia
+            cu un sentiment puternic de rebeliune și emancipare.
+            <span class="hover-container" style="text-decoration: underline">
+              Marlene Dietrich
+              <img
+                src="../assets/images/articles/cravata/MarleneDietrcih.jpg"
+                alt="Marlene Dietrich"
+                class="tooltip-image"
+              /> </span
+            >, actrița germană care a început ca fiind cântăreață de cabaret, a
+            folosit cravata ca mijloc de exprimare a personalității sale: un
+            talent extrem de rafinat, având o batjocură de sine cu o sexualitate
+            îndrăzneață și o inteligență insolentă. În era modernă, tabloidele
+            au fost pline cu
+            <span class="hover-container" style="text-decoration: underline">
+              Julia Roberts
+              <img
+                src="../assets/images/articles/cravata/JuliaRoberts.webp"
+                alt="Julia Roberts"
+                class="tooltip-image"
+              />
+            </span>
+            la premiile Golden Globes din 1990 într-un costum bărbătesc
+            oversized și o cravată cu imprimeu floral de bancher.
+          </p>
+
+          <p id="ident">
+            Cravata din garderoba mea este, de fapt, împrumutată fără gânduri de
+            întoarcere de la tatăl meu, fost bancher de profesie. În dungi
+            azurii și albastre închis cu gri, mai lată decât mi-am imaginat că
+            mi-ar plăcea, aceasta reprezintă accesoriul masculin care mă
+            provoacă să fiu creativă. Or, în zilele noastre, reinterpretarea
+            este cheia pentru a pipera o ținută. Fie că preferați să o purtați
+            în jurul taliei, ca o curea, la baza gâtului peste o cămașă albă din
+            poplină, cu unul din 48 de noduri faimoase sau să o lăsați nelegată,
+            știți sigur că ieșiți în evidență. Multitudinea de modele și stofe
+            cu imprimeuri originale vă ajută să fiți unici, dacă nu vă temeți să
+            încercați.
+          </p>
+          <p id="ident">
+            Pe lângă libertatea de exprimare pe care mi-o conferă cravata ca
+            accesoriu în sine, cea a tatălui meu poartă cu ea o tentă
+            nostalgică. Parcă mai miroase un pic a cafea, parcă o văd
+            legănându-se, venind din depărtare, seara, după o zi de lucru. Prea
+            mult spus moștenire, doar un martor al trecerii timpului…
+          </p>
+
+          <p style="text-align: end">-AE</p>
+        </div>
+
+        <div class="like-container">
+          <button id="like-button">
+            <i
+              id="heart-icon"
+              class="fa-regular fa-heart heart-icon not-liked"
+            ></i>
+          </button>
+          <span id="like-count">0</span> persoane
+        </div>
+
+        <div class="article-navigation">
+          <a href="./un-joc-de-carti.html" class="nav-card">
+            <h4>← Articol precedent</h4>
+            <p>Un joc de cărți</p>
+          </a>
+         <div></div>
+        </div>
+      </article>
+    </main>
+
+    <!-- Footer Section -->
+    <div class="footer-content">
+      <div class="footer-left">
+        © 2025 AE – Toate drepturile rezervate, cu excepția dreptului de a fi
+        glorios de imperfectă.
+      </div>
+      <div class="footer-right">
+        <a href="https://www.instagram.com/andreeae.ene/" target="_blank">
+          <img src="../assets/icons/InstagramIcon.png" alt="Instagram" />
+        </a>
+        <a href="https://ro.pinterest.com/andreaaene12/" target="_blank">
+          <img src="../assets/icons/PinterestPng.png" alt="Pinterest" />
+        </a>
+      </div>
+    </div>
+
+    <script type="module">
+      import { initializeLikeSystem } from '../scripts/firebase-config.js';
+
+      document.addEventListener('DOMContentLoaded', () => {
+        // Initialize like system
+        const cleanup = initializeLikeSystem?.();
+
+        // Intersection Observer for images
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in-view');
+            }
+          });
+        });
+
+        document.querySelectorAll('.editorial-image').forEach((img) => {
+          observer.observe(img);
+        });
+
+        // Cleanup when needed
+        window.addEventListener('beforeunload', () => {
+          cleanup?.();
+          observer.disconnect();
+        });
+      });
+    </script>
+  </body>
+</html>
