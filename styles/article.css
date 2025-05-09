@@ -278,3 +278,28 @@ figcaption {
   font-size: 1rem;
   color: #333;
 }
+
+/* Pentru interviwes */
+.interview {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.interview .question,
+.interview .answer {
+  margin-bottom: 1.5rem;
+}
+
+.interview .name {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.3rem;
+  color: #333;
+}
+
+.interview .text {
+  padding-left: 1rem;
+  border-left: 3px solid #ccc;
+}
