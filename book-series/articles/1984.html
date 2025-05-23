@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1984 - George Orwell - AE Chronicles</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../../assets/icons/AE-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../../assets/icons/AE-32x32.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../../assets/icons/AE-iphone-size.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../styles/main.css" />
+    <link rel="stylesheet" href="../../styles/article.css" />
+    <style>
+      .hover-container {
+        position: relative;
+        display: inline;
+        cursor: pointer;
+        /* text-decoration: underline ; */
+      }
+
+      .hover-container .tooltip-image {
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 220px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 1000;
+        pointer-events: none;
+        border-radius: 20px;
+        border: 2px solid #e0e0e0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .hover-container:hover .tooltip-image {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(-10px);
+      }
+
+      .article-body h2 {
+        /* font-family: 'Dancing Script'; */
+        font-size: 2.2rem;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+        color: #4a3f35;
+        position: relative;
+      }
+
+      .article-body h2::before {
+        content: '📚';
+        position: absolute;
+        left: -2rem;
+        top: 1rem;
+        font-size: 1.5rem;
+      }
+    </style>
+    <script type="module" src="../../scripts//firebase-config.js"></script>
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-18TW2HCZJM"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-18TW2HCZJM');
+  </script>
+  <body>
+    <!-- Navigation Section -->
+    <nav class="main-nav">
+      <div class="nav-container">
+        <div class="nav-logo">AE</div>
+        <ul class="nav-links">
+          <li><a href="../../index.html">Acasă</a></li>
+          <li><a href="../index.html" class="active">Cărți</a></li>
+          <li class="nav-tags">
+            <span>Articole</span>
+            <ul class="dropdown">
+              <!-- Change the filter buttons in navigation -->
+              <li>
+                <a
+                  href="../../articles.html?filter=reflection"
+                  class="filter-btn"
+                  >Reflecții</a
+                >
+              </li>
+              <li>
+                <a href="../../articles.html?filter=fashion" class="filter-btn"
+                  >Fashion</a
+                >
+              </li>
+              <li>
+                <a href="../../articles.html?filter=art" class="filter-btn"
+                  >Artă</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Section -->
+    <main>
+      <article class="article-container">
+        <header class="article-header">
+          <h1 class="article-title">1984 - George Orwell</h1>
+          <div class="article-meta">
+            <span>23 Mai 2025</span>
+            <div class="artcle-badge">Series</div>
+          </div>
+        </header>
+
+        <div class="article-body">
+          <p class="drop-cap">
+            Nu mi-a scăpat ironia de a termina de citit opera lui George Orwell
+            - “1984” exact în această perioadă tumultoasă a României. Or, cum îi
+            place fostei mele profesoare de istorie să zică, nu avem cum să ne
+            prefacem neglijenți, dacă ne cunoaștem trecutul. Legăturile apar
+            datorită subconștientului care face paralele din ceea a fost
+            studiat, manuale de istorie, biografii sau romane, cu evenimentele
+            actuale, fie că ne place sau nu. Îmi amintesc, ca și cum ar fi fost
+            ieri, sintagma: “Cei care nu își cunosc istoria sunt condamnați să o
+            repete” - scris cu majusculă pe peretele clasei, ca o amenințare
+            mută.
+          </p>
+
+          <p id="ident">
+            Destul de sumbră a fost și atmosfera din cartea “1984” - o distopie
+            orwelliană care a marcat atât de mult, încât numele autorului a
+            devenit o expresie recognoscibilă, atribuită unui regim totalitar
+            evoluat. Este descrisă o societate în Marea Britanie, anii ‘50,
+            condusă de frică și control, unde autoritățile aleargă după putere
+            în scop individual și chiar procesul de a gândi reprezintă un lux.
+          </p>
+          <p id="ident">
+            uterea este înfățișată prin “Big Brother”, liderul societății de
+            care nu poți fugi și nu te poți ascunde. Trădătorul suprem este
+            frăția ‘The Brotherhood’ care vrea să se răscoale. Încercările
+            protagonistului Winston Smith sunt de a înțelege vagile amintiri pe
+            care le are despre o lume care nu se aseamănă cu ce trăiește acum.
+            Libertatea gândirii este aproape non existențială, oamenii fiind
+            supravegheați chiar și în somn de “Thought Police”. Valorile sunt
+            răsturnate:
+            <i
+              >„ Războiul este pace <br />
+              Libertatea este sclavie <br />
+              Ignoranța este putere””</i
+            >
+            .
+          </p>
+          <p id="ident">
+            Sărăcia omoară milioane de vieți, dar este menținută de către putere
+            pentru a controla populația. Războiul este, a fost, și va fi mereu.
+            Singura bucurie de care dispui este cea comună, sub numele de
+            <i>Victorie</i>. Engleza este înlocuită cu o limbă mai simplificată
+            pentru un mai bun control al gândirii. Cărțile sunt scrise de
+            mașinării, filmele au rolul de a dispersa evenimentele trecute
+            adaptându-le la vorbele lui “Big Brother”, pentru că el are
+            întotdeauna și fără nici o îndoială dreptate. Ministerele care
+            guvernează reprezintă antiteza în sine: Ministerul Adevărului (care
+            se ocupă de falsificare), Ministerul Păcii (responsabil de război),
+            Ministerul Abundenței (care impune rațiile zilnice și menține
+            sărăcia) și Ministerul Iubirii - în atribuțiile căruia intră
+            torturarea, interogarea și uciderea “trădătorilor”.
+          </p>
+          <p id="ident">
+            Winston își începe propria rebeliune când își procură un jurnal,
+            prin primele idei înșirate și întrebări ce nu trebuiesc gândite.
+            Ulterior, o cunoaște pe Julia, care se răzvrătește prin asumarea
+            propriei sexualități, și se îndrăgostește de ea. Este descrisă o
+            iubire sinceră, dar care nu supraviețuiește. Orwell a reușit să
+            contureze, probabil, una din cele mai importante caracteristici ale
+            unui sistem totalitar extrem: zdrobirea voinței și în special
+            controlul asupra emoției umane…
+          </p>
+          <p id="ident">
+            În urma acestei lecturi, nu pot decât să mă întreb, cât de probabil
+            ar fi acest viitor? Semnele ar trebui să fie clare, nu? Un lider
+            dictatorial, cu o percepție limitată asupra lumii, puțin citit,
+            izolaționist, minciuni aruncate fără scuze, discursul populist… cât
+            de ușor de identificat sunt aceste semne și câți dintre noi am avea
+            capacitatea să le recunoaștem? Până la urmă, marii critici au
+            considerat această societate distopie, prin definiție, sumbră.
+          </p>
+          <p id="ident">Dacă vă recomand? Cu siguranță, este un must.</p>
+          <p style="text-align: end">-AE</p>
+        </div>
+      </article>
+    </main>
+
+    <!-- Footer Section -->
+    <div class="footer-content">
+      <div class="footer-left">
+        © 2025 AE – Toate drepturile rezervate, cu excepția dreptului de a fi
+        glorios de imperfectă.
+      </div>
+      <div class="footer-right">
+        <a href="https://www.instagram.com/andreeae.ene/" target="_blank">
+          <img src="../../assets/icons/InstagramIcon.png" alt="Instagram" />
+        </a>
+        <a href="https://ro.pinterest.com/andreaaene12/" target="_blank">
+          <img src="../../assets/icons/PinterestPng.png" alt="Pinterest" />
+        </a>
+      </div>
+    </div>
+
+    <script type="module">
+      import { initializeLikeSystem } from '../../scripts/firebase-config.js';
+
+      document.addEventListener('DOMContentLoaded', () => {
+        // Initialize like system
+        const cleanup = initializeLikeSystem?.();
+
+        // Intersection Observer for images
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in-view');
+            }
+          });
+        });
+
+        document.querySelectorAll('.editorial-image').forEach((img) => {
+          observer.observe(img);
+        });
+
+        // Cleanup when needed
+        window.addEventListener('beforeunload', () => {
+          cleanup?.();
+          observer.disconnect();
+        });
+      });
+    </script>
+  </body>
+</html>
