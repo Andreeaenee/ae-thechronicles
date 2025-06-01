@@ -121,7 +121,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-
 // Add active class to current filter
 document.addEventListener('DOMContentLoaded', () => {
   const urlParams = new URLSearchParams(window.location.search);
@@ -136,3 +135,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+// Detectăm touch support
+const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+if (isTouchDevice) {
+  document.querySelectorAll('.hover-container').forEach((container) => {
+    container.addEventListener('click', function (e) {
+      // Închide celelalte tooltip-uri
+      document.querySelectorAll('.hover-container').forEach((el) => {
+        if (el !== container) el.classList.remove('active');
+      });
+
+      // Activează sau dezactivează tooltip-ul curent
+      container.classList.toggle('active');
+      e.stopPropagation();
+    });
+  });
+
+  // Închide tooltip-urile dacă dai click în afară
+  document.addEventListener('click', () => {
+    document
+      .querySelectorAll('.hover-container')
+      .forEach((el) => el.classList.remove('active'));
+  });
+}

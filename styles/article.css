@@ -303,3 +303,21 @@ figcaption {
   padding-left: 1rem;
   border-left: 3px solid #ccc;
 }
+
+/* Hover for desktop */
+@media (hover: hover) {
+  .hover-container:hover .tooltip-image {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-10px);
+    pointer-events: auto;
+  }
+}
+
+/* Tap/click for mobile */
+.hover-container.active .tooltip-image {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-10px);
+  pointer-events: auto;
+}
