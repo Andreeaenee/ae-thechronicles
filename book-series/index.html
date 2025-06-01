@@ -30,7 +30,7 @@
 
     <!-- Preload Resources -->
     <link rel="preload" href="../styles/main.css" as="style" />
-    <link rel="preload" href="../scripts/main.js" as="script" />
+    <link rel="preload" href="../scripts/main.js" as="script" defer/>
 
     <!-- External Resources -->
     <link rel="stylesheet" href="../styles/main.css" />
@@ -74,7 +74,9 @@
                 >
               </li>
               <li>
-                <a href="../articles.html?filter=art" class="filter-btn">Artă</a>
+                <a href="../articles.html?filter=art" class="filter-btn"
+                  >Artă</a
+                >
               </li>
             </ul>
           </li>
@@ -82,36 +84,46 @@
       </div>
     </nav>
     <main class="articles-main">
-        <section
+      <section
         class="latest-articles"
         aria-labelledby="latest-articles-heading"
-        style="background-color: white;"
+        style="background-color: white"
       >
         <h2 id="latest-articles-heading" class="section-title">
-            📖 Books Review
+          📖 Books Review
         </h2>
-        <div class="article-grid" >
+        <div class="article-grid">
           <article class="article-card fade-in">
             <a href="../book-series/articles/1984.html" class="article-link">
-              <img src="../assets/images/covers/book-series/2cover.png" loading="lazy" />
+              <img
+                src="../assets/images/covers/book-series/2cover.png"
+                loading="lazy"
+                decoding="async"
+              />
               <div class="article-info">
                 <h3>1984 - George Orwell</h3>
               </div>
             </a>
           </article>
+
           <article class="article-card fade-in">
-            <a href="../book-series/articles/carti-pe-care-le-iubesc.html" class="article-link">
-              <img src="../assets/images/covers/book-series/1cover.png" loading="lazy" />
+            <a
+              href="../book-series/articles/carti-pe-care-le-iubesc.html"
+              class="article-link"
+            >
+              <img
+                src="../assets/images/covers/book-series/1cover.png"
+                loading="lazy"
+                decoding="async"
+              />
               <div class="article-info">
                 <h3>3 cărți pe care le iubesc</h3>
               </div>
             </a>
           </article>
-          <div></div>
-        </div>
         </div>
       </section>
-      </main>
+    </main>
 
     <!-- Footer section -->
     <footer class="footer-content">
@@ -128,7 +140,12 @@
           rel="noopener noreferrer"
           aria-label="Profil Instagram"
         >
-          <img src="../assets/icons/InstagramIcon.png" alt="Iconă Instagram" />
+          <img
+            src="../assets/icons/InstagramIcon.png"
+            alt="Iconă Instagram"
+            loading="lazy"
+            decoding="async"
+          />
         </a>
         <a
           href="https://ro.pinterest.com/andreaaene12/"
@@ -136,11 +153,15 @@
           rel="noopener noreferrer"
           aria-label="Profil Pinterest"
         >
-          <img src="../assets/icons/PinterestPng.png" alt="Iconă Pinterest" />
+          <img
+            src="../assets/icons/PinterestPng.png"
+            alt="Iconă Pinterest"
+            loading="lazy"
+            decoding="async"
+          />
         </a>
       </div>
     </footer>
 
-    <script src="../scripts/main.js" defer></script>
   </body>
 </html>
