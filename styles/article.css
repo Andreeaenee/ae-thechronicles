@@ -304,6 +304,20 @@ figcaption {
   border-left: 3px solid #ccc;
 }
 
+@media (max-width: 768px) {
+  .article-body h2 {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    margin-left: 1rem;
+  }
+  .nav-card h4 {
+    font-size: 1rem;
+  }
+  .nav-card p {
+    font-size: 0.8rem;
+  }
+}
+
 /* Hover for desktop */
 @media (hover: hover) {
   .hover-container:hover .tooltip-image {
