@@ -1,7 +1,15 @@
 // Mobile Menu Toggle
-document.querySelector('.menu-toggle').addEventListener('click', () => {
-  document.querySelector('.nav-links').classList.toggle('active');
+
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+    hamburger.classList.toggle('active');
+  });
 });
+
 
 // Smooth Scroll
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {

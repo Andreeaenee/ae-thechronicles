@@ -409,6 +409,7 @@ body {
 }
 
 /* Navigation  */
+/* Navigation Container */
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -418,14 +419,17 @@ body {
   padding: 0 20px;
   width: 100%;
   box-sizing: border-box;
+  position: relative; /* Important for mobile menu positioning */
 }
 
+/* Logo */
 .nav-logo {
   font-family: 'Dancing Script', cursive;
   font-size: 1.8rem;
   color: var(--primary-red);
 }
 
+/* Nav Links */
 .nav-links {
   display: flex;
   list-style: none;
@@ -433,6 +437,7 @@ body {
   align-items: center;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
+  transition: all 0.3s ease;
 }
 
 .nav-links a,
@@ -449,11 +454,11 @@ body {
   color: var(--primary-red);
 }
 
-/* Dropdown Menu - Fixed */
+/* Dropdown Menu */
 .nav-tags {
   position: relative;
   cursor: pointer;
-  padding: 10px 0; /* Creates hover zone */
+  padding: 10px 0;
 }
 
 .dropdown {
@@ -496,12 +501,40 @@ body {
   background: rgba(162, 35, 35, 0.05);
 }
 
-/* Responsive */
+/* Hamburger Button */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
   .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: white;
     flex-direction: column;
     align-items: flex-end;
     gap: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+
+  .nav-links.show {
+    display: flex;
   }
 
   .main-nav {
@@ -510,7 +543,23 @@ body {
   }
 
   .dropdown {
-    left: auto;
-    right: 0;
+    position: static;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+    box-shadow: none;
+    padding-left: 20px;
+    transform: none;
+  }
+
+  .nav-tags span {
+    display: block;
+    width: 100%;
+    text-align: right;
+  }
+
+  .nav-tags:hover .dropdown,
+  .nav-tags:focus-within .dropdown {
+    display: block;
   }
 }
