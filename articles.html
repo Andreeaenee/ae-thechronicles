@@ -319,7 +319,9 @@
 
     <script src="scripts/main.js" defer></script>
     <script>
+      import { initializeNewsletterForm } from '/scripts/firebase-config.js';
       document.addEventListener('DOMContentLoaded', () => {
+        initializeNewsletterForm();
         // Updated valid filters
         const validFilters = ['reflection', 'fashion', 'art', 'all'];
         const urlParams = new URLSearchParams(window.location.search);

@@ -4,7 +4,12 @@ import {
   doc,
   onSnapshot,
   runTransaction,
-  increment,
+  collection,
+  addDoc,
+  serverTimestamp,
+  query,
+  where,
+  getDocs,
 } from 'https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js';
 
 const firebaseConfig = {
@@ -107,4 +112,59 @@ export function initializeLikeSystem() {
     unsubscribe();
     likeBtn.replaceWith(likeBtn.cloneNode(true)); // Remove event listeners
   };
+}
+
+// --- Newsletter email signup logic ---
+export function initializeNewsletterForm() {
+  if (!db) return;
+
+  const form = document.getElementById('newsletterForm');
+  const emailInput = document.getElementById('newsletterEmail');
+  const messageDiv = document.getElementById('newsletterMessage');
+
+  if (!form || !emailInput || !messageDiv) return;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const email = emailInput.value.trim();
+
+    if (!email || !validateEmail(email)) {
+      messageDiv.textContent = 'Te rog să introduci o adresă validă.';
+      messageDiv.style.color = 'red';
+      return;
+    }
+
+    try {
+      const emailRef = collection(db, 'newsletterEmails');
+      const q = query(emailRef, where('email', '==', email.toLowerCase()));
+
+      const querySnapshot = await getDocs(q);
+
+      if (!querySnapshot.empty) {
+        messageDiv.textContent = 'Această adresă este deja abonată.';
+        messageDiv.style.color = 'orange';
+        return;
+      }
+
+      await addDoc(collection(db, 'newsletterEmails'), {
+        email,
+        timestamp: serverTimestamp(),
+      });
+
+      messageDiv.textContent = 'Mulțumim pentru abonare!';
+      messageDiv.style.color = 'green';
+      emailInput.value = '';
+    } catch (error) {
+      console.error('Eroare la salvarea email-ului:', error);
+      messageDiv.textContent = 'A apărut o eroare. Încearcă din nou.';
+      messageDiv.style.color = 'red';
+    }
+  });
+}
+
+// Simple email validation helper
+function validateEmail(email) {
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(email);
 }

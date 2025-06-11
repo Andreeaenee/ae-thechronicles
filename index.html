@@ -237,6 +237,24 @@
       </section>
     </main>
 
+    <!-- Newsletter section -->
+    <section class="newsletter-section" aria-labelledby="newsletter-heading">
+      <h2 id="newsletter-heading">Abonează-te la newsletter</h2>
+      <p>Primește inspirație și actualizări direct în inbox-ul tău!</p>
+      <form id="newsletterForm">
+        <input
+          type="email"
+          id="newsletterEmail"
+          name="email"
+          placeholder="Introdu adresa ta de Gmail"
+          required
+          aria-label="Adresă Gmail"
+        />
+        <button type="submit">Abonează-te</button>
+      </form>
+      <div id="newsletterMessage" role="alert" aria-live="polite"></div>
+    </section>
+
     <!-- Footer section -->
     <footer class="footer-content">
       <div class="footer-left">
@@ -287,7 +305,12 @@
         </a>
       </div>
     </footer>
-
-    <script src="scripts/main.js" defer></script>
+    <script type="module">
+      import { initializeNewsletterForm } from './scripts/firebase-config.js';
+      // Initialize the newsletter form functionality
+      document.addEventListener('DOMContentLoaded', () => {
+        initializeNewsletterForm();
+      });
+    </script>
   </body>
 </html>

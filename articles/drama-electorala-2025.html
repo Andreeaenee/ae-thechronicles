@@ -324,11 +324,15 @@
     </div>
 
     <script type="module">
-      import { initializeLikeSystem } from '../scripts/firebase-config.js';
+      import {
+        initializeLikeSystem,
+        initializeNewsletterForm,
+      } from '../scripts/firebase-config.js';
 
       document.addEventListener('DOMContentLoaded', () => {
         // Initialize like system
         const cleanup = initializeLikeSystem?.();
+        initializeNewsletterForm?.();
 
         // Intersection Observer for images
         const observer = new IntersectionObserver((entries) => {

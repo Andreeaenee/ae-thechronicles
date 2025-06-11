@@ -563,3 +563,101 @@ body {
     display: block;
   }
 }
+
+/* Newsletter Section */
+.newsletter-section {
+  background-color: #fffbfb;
+  padding: 2rem;
+  margin: 3rem auto;
+  border-radius: 12px;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(162, 35, 35, 0.1); /* soft version of --primary-red */
+  font-family: 'Segoe UI', sans-serif;
+  border: 1px solid var(--light-beige);
+}
+
+.newsletter-section h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: #535353;
+}
+
+.newsletter-section p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: var(--warm-gray);
+}
+
+/* Flex container for input and button */
+.newsletter-section form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* Email input */
+.newsletter-section input[type='email'] {
+  padding: 0.6rem 0.75rem;
+  flex: 1 1 60%;
+  min-width: 200px;
+  border: 1px solid var(--warm-gray);
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  background-color: var(--white);
+  color: var(--ink-black);
+}
+
+.newsletter-section input[type='email']::placeholder {
+  color: var(--warm-gray);
+}
+
+.newsletter-section input[type='email']:focus {
+  border-color: var(--accent-red);
+  outline: none;
+}
+
+/* Submit button */
+.newsletter-section button {
+  padding: 0.6rem 1.2rem;
+  background-color: var(--primary-red);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+}
+
+.newsletter-section button:hover {
+  background-color: var(--accent-red);
+}
+
+/* Message */
+#newsletterMessage {
+  margin-top: 1rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+  min-height: 1.2em;
+  color: var(--grounding-green);
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .newsletter-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .newsletter-section form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .newsletter-section input[type='email'],
+  .newsletter-section button {
+    width: 100%;
+  }
+}
