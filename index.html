@@ -57,6 +57,20 @@
     <nav class="main-nav">
       <div class="nav-container">
         <div class="nav-logo">AE</div>
+        <div class="nav-search">
+          <input
+            type="search"
+            id="articleSearch"
+            placeholder="Caută articole..."
+            aria-label="Caută articole"
+            autocomplete="off"
+          />
+          <ul
+            id="autocompleteList"
+            class="autocomplete-list"
+            role="listbox"
+          ></ul>
+        </div>
         <button class="hamburger" aria-label="Deschide meniul">&#9776;</button>
         <ul class="nav-links">
           <li><a href="./index.html" class="active">Acasă</a></li>
@@ -97,6 +111,8 @@
     </header>
 
     <main>
+      <!-- Search section -->
+
       <!-- Last articles section -->
       <section
         class="latest-articles"
@@ -307,9 +323,11 @@
     </footer>
     <script type="module">
       import { initializeNewsletterForm } from './scripts/firebase-config.js';
+      import { initializeSearch } from './scripts/search.js';
       // Initialize the newsletter form functionality
       document.addEventListener('DOMContentLoaded', () => {
         initializeNewsletterForm();
+        initializeSearch();
       });
     </script>
   </body>

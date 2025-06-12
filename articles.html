@@ -85,6 +85,20 @@
     <nav class="main-nav">
       <div class="nav-container">
         <div class="nav-logo">AE</div>
+        <div class="nav-search">
+          <input
+            type="search"
+            id="articleSearch"
+            placeholder="Caută articole..."
+            aria-label="Caută articole"
+            autocomplete="off"
+          />
+          <ul
+            id="autocompleteList"
+            class="autocomplete-list"
+            role="listbox"
+          ></ul>
+        </div>
         <button class="hamburger" aria-label="Deschide meniul">&#9776;</button>
         <ul class="nav-links">
           <li><a href="./index.html">Acasă</a></li>
@@ -278,6 +292,24 @@
       </section>
     </main>
 
+    <!-- Newsletter section -->
+    <section class="newsletter-section" aria-labelledby="newsletter-heading">
+      <h2 id="newsletter-heading">Abonează-te la newsletter</h2>
+      <p>Primește inspirație și actualizări direct în inbox-ul tău!</p>
+      <form id="newsletterForm">
+        <input
+          type="email"
+          id="newsletterEmail"
+          name="email"
+          placeholder="Introdu adresa ta de Gmail"
+          required
+          aria-label="Adresă Gmail"
+        />
+        <button type="submit">Abonează-te</button>
+      </form>
+      <div id="newsletterMessage" role="alert" aria-live="polite"></div>
+    </section>
+
     <!-- Footer Section -->
     <div class="footer-content">
       <div class="footer-left">
@@ -318,10 +350,12 @@
     </div>
 
     <script src="scripts/main.js" defer></script>
-    <script>
-      import { initializeNewsletterForm } from '/scripts/firebase-config.js';
+    <script type="module">
+      import { initializeNewsletterForm } from './scripts/firebase-config.js';
+      import { initializeSearch } from './scripts/search.js';
       document.addEventListener('DOMContentLoaded', () => {
         initializeNewsletterForm();
+        initializeSearch?.();
         // Updated valid filters
         const validFilters = ['reflection', 'fashion', 'art', 'all'];
         const urlParams = new URLSearchParams(window.location.search);
