@@ -28,16 +28,13 @@
       href="../assets/icons/AE-iphone-size.png"
     />
 
-    <!-- Preload Resources -->
-    <link rel="preload" href="../styles/main.css" as="style" />
-    <link rel="preload" href="../scripts/main.js" as="script" defer />
-
     <!-- External Resources -->
     <link rel="stylesheet" href="../styles/main.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap"
     />
+    <script src="../scripts/main.js" defer></script>
   </head>
   <!-- Google tag (gtag.js) -->
   <script
@@ -180,7 +177,7 @@
       </div>
     </footer>
   </body>
-  <script>
+  <script type="module">
     import { initializeNewsletterForm } from '../scripts/firebase-config.js';
     // Initialize the newsletter form functionality
     document.addEventListener('DOMContentLoaded', () => {
