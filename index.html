@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ro">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="AE Chronicles - Un spațiu de inspirație dedicat artelor, modei și reflecțiilor personale"
+      content="AE Chronicles - A space of inspiration dedicated to art, fashion, and personal reflections"
     />
-    <title>AE Chronicles - Artă, Modă, Reflecții</title>
+    <title>AE Chronicles - Art, Fashion, Reflections</title>
 
     <!-- Favicons -->
     <link
@@ -60,8 +60,8 @@
           <input
             type="search"
             id="articleSearch"
-            placeholder="Caută articole..."
-            aria-label="Caută articole"
+            placeholder="Search articles..."
+            aria-label="Search articles"
             autocomplete="off"
           />
           <ul
@@ -70,19 +70,19 @@
             role="listbox"
           ></ul>
         </div>
-        <button class="hamburger" aria-label="Deschide meniul">&#9776;</button>
+        <button class="hamburger" aria-label="Open menu">&#9776;</button>
         <ul class="nav-links">
-          <li><a href="./index.html" class="active">Acasă</a></li>
-          <li><a href="./book-series/index.html">Cărți</a></li>
+          <li><a href="./index.html" class="active">Home</a></li>
+          <li><a href="./book-series/index.html">Books</a></li>
           <li class="nav-tags">
-            <span>Articole</span>
+            <span>Articles</span>
             <ul class="dropdown">
               <li>
-                <a href="./articles.html" class="filter-btn">Arhivă</a>
+                <a href="./articles.html" class="filter-btn">Archive</a>
               </li>
               <li>
                 <a href="./articles.html?filter=reflection" class="filter-btn"
-                  >Reflecții</a
+                  >Reflections</a
                 >
               </li>
               <li>
@@ -91,7 +91,12 @@
                 >
               </li>
               <li>
-                <a href="./articles.html?filter=art" class="filter-btn">Artă</a>
+                <a href="./articles.html?filter=art" class="filter-btn">Art</a>
+              </li>
+              <li>
+                <a href="./articles.html?filter=travel" class="filter-btn"
+                  >Travel</a
+                >
               </li>
             </ul>
           </li>
@@ -104,9 +109,9 @@
         <div class="logo">AE</div>
         <div class="title">— THE CHRONICLES —</div>
         <p class="tagline">
-          Un spațiu unde împărtășesc frumusețea vieții de zi cu zi, de la modă
-          și artă la călătorii și reflecții personale. Sper să vă inspirați și
-          voi din aceste povești.
+          A space where I share the beauty of everyday life—from fashion and art
+          to travel and personal reflections. I hope these stories will inspire
+          you too.
           <span aria-hidden="true">💕</span>
         </p>
       </div>
@@ -121,18 +126,32 @@
         aria-labelledby="latest-articles-heading"
       >
         <h2 id="latest-articles-heading" class="section-title">
-          🖋️ Ultimele articole
+          🖋️ Latest articles
         </h2>
         <div class="article-grid">
           <article class="article-card fade-in">
+            <a href="articles/phuket-mini-ghid.html" class="article-link">
+              <div class="badge">Travel</div>
+              <img
+                src="assets/images/articles/phuket mini-guide/view1.jpg"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="article-info">
+                <h3>Phuket Mini Guide</h3>
+              </div>
+            </a>
+          </article>
+          <article class="article-card fade-in">
             <a href="articles/10-chestii-chic.html" class="article-link">
+              <div class="badge">Fashion</div>
               <img
                 src="assets/images/covers/10cover.jpeg"
                 loading="lazy"
                 decoding="async"
               />
               <div class="article-info">
-                <h3>10 chestii pe care le găsesc chic</h3>
+                <h3>10 things I find extremely chic</h3>
               </div>
             </a>
           </article>
@@ -148,62 +167,48 @@
               </div>
             </a>
           </article>
-
+        </div>
+        <br />
+        <div class="article-grid">
           <article class="article-card fade-in" data-tag="reflection">
             <a href="articles/drama-electorala-2025.html" class="article-link">
-              <div class="badge">Reflecții</div>
+              <div class="badge">Reflections</div>
               <img
                 src="assets/images/covers/9cover.webp"
                 loading="lazy"
                 decoding="async"
               />
               <div class="article-info">
-                <h3>Drama electorală 2025</h3>
+                <h3>Electoral Drama 2025</h3>
               </div>
             </a>
           </article>
-        </div>
-        <br />
-        <div class="article-grid">
           <article class="article-card fade-in" data-tag="reflection">
             <a
               href="articles/interviu-cu-singuratatea.html"
               class="article-link"
             >
-              <div class="badge">Reflecții</div>
+              <div class="badge">Reflections</div>
               <img
                 src="assets/images/covers/8cover.webp"
                 loading="lazy"
                 decoding="async"
               />
               <div class="article-info">
-                <h3>Interviu cu singurătatea</h3>
+                <h3>Interview with solitude</h3>
               </div>
             </a>
           </article>
           <article class="article-card fade-in" data-tag="fashion">
             <a href="articles/cravata.html" class="article-link">
-              <div class="badge">Fashion</div>
+              <div class="badge">Reflections</div>
               <img
                 src="assets/images/covers/7cover.webp"
                 loading="lazy"
                 decoding="async"
               />
               <div class="article-info">
-                <h3>Cravata</h3>
-              </div>
-            </a>
-          </article>
-          <article class="article-card fade-in" data-tag="reflection">
-            <a href="articles/un-joc-de-carti.html" class="article-link">
-              <div class="badge">Reflecții</div>
-              <img
-                src="assets/images/covers/6cover.webp"
-                loading="lazy"
-                decoding="async"
-              />
-              <div class="article-info">
-                <h3>Un joc de cărți</h3>
+                <h3>The tie</h3>
               </div>
             </a>
           </article>
@@ -217,13 +222,13 @@
       >
         <h2 id="monthly-fragments-heading" class="section-title">
           <!-- icecream emoji -->
-          January Mood
+          February Mood
         </h2>
         <div class="fragment-grid">
           <figure class="fragment-image">
             <img
               src="assets/images/monthly-pics/january-2026.jpeg"
-              alt="Noiembrie photo 2025"
+              alt="February photo 2026"
               loading="lazy"
               decoding="async"
               height="400px"
@@ -232,14 +237,14 @@
           <div class="fragment-text">
             <blockquote cite="Mark Levy">
               <p>
-                „E nevoie de puțină filosofie, mai ales în epoca noastră de
-                utilitarism și simț practic exagerat; din păcate însă, e
-                disprețuită de noi.”
+                „There is a need for a little philosophy, especially in our era
+                of utilitarianism and excessive practical sense; however, it is
+                despised by us.”
               </p>
               <footer>— <cite>Fiodor Dostoievski</cite></footer>
             </blockquote>
             <div class="music-embed">
-              <p class="fragment-subtext">🎧 Soundtrack-ul lunii:</p>
+              <p class="fragment-subtext">🎧 The soundtrack of the month:</p>
               <iframe
                 data-testid="embed-iframe"
                 style="border-radius: 12px"
@@ -248,7 +253,13 @@
                 height="152"
                 frameborder="0"
                 allowfullscreen=""
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                allow="
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  fullscreen;
+                  picture-in-picture;
+                "
                 loading="lazy"
               ></iframe>
             </div>
@@ -259,18 +270,18 @@
 
     <!-- Newsletter section -->
     <section class="newsletter-section" aria-labelledby="newsletter-heading">
-      <h2 id="newsletter-heading">Abonează-te la newsletter</h2>
-      <p>Primește inspirație și actualizări direct în inbox-ul tău!</p>
+      <h2 id="newsletter-heading">Subscribe to newsletter</h2>
+      <p>Receive inspiration and updates directly in your inbox!</p>
       <form id="newsletterForm">
         <input
           type="email"
           id="newsletterEmail"
           name="email"
-          placeholder="Introdu adresa ta de Gmail"
+          placeholder="Enter your Gmail address"
           required
-          aria-label="Adresă Gmail"
+          aria-label="Gmail address"
         />
-        <button type="submit">Abonează-te</button>
+        <button type="submit">Subscribe</button>
       </form>
       <div id="newsletterMessage" role="alert" aria-live="polite"></div>
     </section>
@@ -278,9 +289,9 @@
     <!-- Footer section -->
     <footer class="footer-content">
       <div class="footer-left">
-        © 2025 AE – Toate drepturile rezervate
+        © 2026 AE – All rights reserved
         <span class="visually-hidden"
-          >, cu excepția dreptului de a fi glorios de imperfectă.</span
+          >, except the right to be glorious and imperfect.</span
         >
       </div>
       <div class="footer-right">
@@ -292,7 +303,7 @@
         >
           <img
             src="assets/icons/InstagramIcon.png"
-            alt="Iconă Instagram"
+            alt="Instagram"
             loading="lazy"
             decoding="async"
           />
@@ -305,7 +316,7 @@
         >
           <img
             src="assets/icons/PinterestPng.png"
-            alt="Iconă Pinterest"
+            alt="Pinterest"
             loading="lazy"
             decoding="async"
           />
@@ -318,7 +329,7 @@
         >
           <img
             src="assets/icons/GmailPng.png"
-            alt="Iconă Gmail"
+            alt="Gmail"
             loading="lazy"
             decoding="async"
           />
