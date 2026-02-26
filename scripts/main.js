@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-
 // Smooth Scroll
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener('click', function (e) {
@@ -167,3 +166,10 @@ if (isTouchDevice) {
       .forEach((el) => el.classList.remove('active'));
   });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const copyrightEl = document.querySelector('#copyright-year');
+  if (copyrightEl) {
+    copyrightEl.textContent = new Date().getFullYear();
+  }
+});
