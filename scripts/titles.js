@@ -19,4 +19,13 @@ export const titles = [
   { title: 'Lista cu liste', url: 'articles/lista-cu-liste.html' },
   { title: 'Razboiul Rece', url: 'articles/razboiul-rece.html' },
   { title: 'Sincer', url: 'articles/sincer.html' },
+  { title: 'Phuket Mini Guide', url: 'articles/phuket-mini-ghid.html' },
+  {
+    title: '10 things I find extremely chic',
+    url: 'articles/10-chestii-chic.html',
+  },
+  {
+    title: 'White Nights - Fyodor Dostoevsky',
+    url: 'book-series/articles/white-nights.html',
+  },
 ];
