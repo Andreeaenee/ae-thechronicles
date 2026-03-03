@@ -28,4 +28,8 @@ export const titles = [
     title: 'White Nights - Fyodor Dostoevsky',
     url: 'book-series/articles/white-nights.html',
   },
+  {
+    title: '15 gift ideas for all the women in your life, on a budget',
+    url: 'articles/woman-gifts-ideas.html',
+  },
 ];
