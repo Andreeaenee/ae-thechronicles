@@ -417,15 +417,15 @@
         }
 
         const titleMap = {
-          reflection: '🖋️ Reflecții',
-          fashion: '👗 Modă',
-          art: '🎨 Artă',
+          reflection: '🖋️ Reflections',
+          fashion: '👗 Fashion',
+          art: '🎨 Art',
           travel: '🌍 Travel',
-          all: '📚 Arhivă',
+          all: '📚 Archive',
         };
 
         const sectionTitle = document.querySelector('.section-title');
-        sectionTitle.textContent = titleMap[filter] || 'Articole';
+        sectionTitle.textContent = titleMap[filter] || 'Articles';
 
         // Filter articles
         document.querySelectorAll('.article-card').forEach((card) => {
